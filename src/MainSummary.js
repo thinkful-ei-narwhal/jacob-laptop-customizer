@@ -1,25 +1,25 @@
-import React from 'react';
+// import React from 'react';
 
 
-class MainSummary extends React.Component {
+// class MainSummary extends React.Component {
 
-    render() {
-        return Object.keys(this.props.selected).map((feature, idx) => {
-        const featureHash = feature + '-' + idx;
-        const selectedOption = this.props.selected[feature];
+//     render() {
+//         return Object.keys(this.props.selected).map((feature, idx) => {
+//         const featureHash = feature + '-' + idx;
+//         const selectedOption = this.props.selected[feature];
       
-            return (
-              <div className="summary__option" key={featureHash}>
-                <div className="summary__option__label">{feature} </div>
-                <div className="summary__option__value">{selectedOption.name}</div>
-                <div className="summary__option__cost">
-                  {this.props.USCurrencyFormat.format(selectedOption.cost)}
-                </div>
-              </div>
-            );
-          });
+//             return (
+//               <div className="summary__option" key={featureHash}>
+//                 <div className="summary__option__label">{feature} </div>
+//                 <div className="summary__option__value">{selectedOption.name}</div>
+//                 <div className="summary__option__cost">
+//                   {this.props.USCurrencyFormat.format(selectedOption.cost)}
+//                 </div>
+//               </div>
+//             );
+//           });
 
-    }
+//     }
 
-}
-export default MainSummary;
+// }
+// export default MainSummary;

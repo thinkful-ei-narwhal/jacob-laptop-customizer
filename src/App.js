@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MainForm from './MainForm';
 import MainSummary from './MainSummary'
-import SummaryTotal from './SummaryTotal'
+import Cart from './Cart'
 import './App.css';
 
 
@@ -16,6 +16,9 @@ const USCurrencyFormat = new Intl.NumberFormat('en-US', {
 
 
 class App extends Component {
+
+
+
   state = {
     selected: {
       Processor: {
@@ -67,14 +70,15 @@ class App extends Component {
           </form>
           <section className="main__summary">
             <h2>Your cart</h2>
-            {<MainSummary
+            {/* {<MainSummary
                 USCurrencyFormat = {USCurrencyFormat}
                 selected = {this.state.selected}
             />}
             {<SummaryTotal
                 USCurrencyFormat = {USCurrencyFormat}
                 selected = {this.state.selected}
-            />}
+            />} */}
+            <Cart selected = {this.state.selected}  USCurrencyFormat ={USCurrencyFormat} />
           </section>
         </main>
       </div>
