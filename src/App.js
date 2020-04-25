@@ -1,14 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import MainForm from './Mainform';
 import Cart from './Cart';
 import Header from './Header'
+
+
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
 	style: 'currency',
 	currency: 'USD',
 });
 
-class App extends Component {
+class App extends React.Component {
 	state = {
 		selected: {
 			Processor: {
@@ -43,17 +45,13 @@ class App extends Component {
 			<div className='App'>
                 <Header />
 				<main>
-				<form className='main__form'>
-						<h2>Customize your laptop</h2>
-
+					<h2>Customize your laptop</h2>
 					<MainForm
 						store={this.props.store}
 						usCurrencyFormat={USCurrencyFormat}
 						selected={this.state.selected}
 						updateFeature={this.updateFeature}
 					/>
-				</form>
-
 					<Cart
 						selected={this.state.selected}
 						usCurrencyFormat={USCurrencyFormat}
