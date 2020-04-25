@@ -9,12 +9,12 @@ export class Cart extends Component {
 			<section className='main__summary'>
 				<h2>Your cart</h2>
 				<MainSummary selected={selected} usCurrencyFormat={usCurrencyFormat} />
-				<div className='summary__total'>
+				{/* <div className='summary__total'>
 					<div className='summary__total__label'>Total</div>
 					<div className='summary__total__value'>
 						{usCurrencyFormat.format(Total(selected))}
 					</div>
-				</div>
+				</div> */}
 			</section>
 		);
 	}

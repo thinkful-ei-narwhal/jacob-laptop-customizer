@@ -3,7 +3,7 @@ import './App.css';
 import MainForm from './Mainform';
 import Cart from './Cart';
 import Header from './Header'
-
+import Total from './Total'
 
 const USCurrencyFormat = new Intl.NumberFormat('en-US', {
 	style: 'currency',
@@ -56,6 +56,9 @@ class App extends React.Component {
 						selected={this.state.selected}
 						usCurrencyFormat={USCurrencyFormat}
 					/>
+					<Total
+					usCurrencyFormat={USCurrencyFormat} 
+					selected={this.state.selected} />
 				</main>
 			</div>
 		);

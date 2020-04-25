@@ -13,7 +13,7 @@ export class MainSummary extends Component {
 					<div className='summary__option__label'>{feature} </div>
 					<div className='summary__option__value'>{selectedOption.name}</div>
 					<div className='summary__option__cost'>
-						{usCurrencyFormat.format(selectedOption.cost)}
+					{usCurrencyFormat.format(selectedOption.cost)}
 					</div>
 				</div>
 			);
