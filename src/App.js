@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import MainForm from './Mainform';
+import MainForm from './MainForm';
 import Cart from './Cart';
 import Header from './Header'
 import Total from './Total'
@@ -46,19 +46,23 @@ class App extends React.Component {
                 <Header />
 				<main>
 					<h2>Customize your laptop</h2>
-					<MainForm
-						store={this.props.store}
-						usCurrencyFormat={USCurrencyFormat}
-						selected={this.state.selected}
-						updateFeature={this.updateFeature}
-					/>
-					<Cart
-						selected={this.state.selected}
-						usCurrencyFormat={USCurrencyFormat}
-					/>
-					<Total
-					usCurrencyFormat={USCurrencyFormat} 
-					selected={this.state.selected} />
+					<form className='main__form'>
+						<MainForm
+							store={this.props.store}
+							usCurrencyFormat={USCurrencyFormat}
+							selected={this.state.selected}
+							updateFeature={this.updateFeature}
+						/>
+					</form>
+					<section className='main__summary'>
+						<Cart
+							selected={this.state.selected}
+							usCurrencyFormat={USCurrencyFormat}
+						/>
+						<Total
+						usCurrencyFormat={USCurrencyFormat} 
+						selected={this.state.selected} />
+					</section>
 				</main>
 			</div>
 		);

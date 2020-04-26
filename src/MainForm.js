@@ -8,7 +8,6 @@ class MainForm extends Component {
 			const featureHash = feature + '-' + idx;
 
 			return (
-				<form className='main__form'>
 				<fieldset className='feature' key={featureHash}>
 					<legend className='feature__name'>
 						<h3>{feature}</h3>
@@ -21,7 +20,6 @@ class MainForm extends Component {
 						selected={selected}
 					/>
 				</fieldset>
-				</form>
 			);
 		});
 	}
